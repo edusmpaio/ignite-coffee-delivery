@@ -15,4 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     background: ${(props) => props.theme['gray-100']};
     color: ${(props) => props.theme['gray-700']};
   }
+
+  a {
+    text-decoration: none;
+  }
 `

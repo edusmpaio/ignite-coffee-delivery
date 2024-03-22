@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: ${(props) => props.theme['gray-100']};
+`
+
+export const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;

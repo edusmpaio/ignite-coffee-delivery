@@ -6,27 +6,30 @@ import {
   LocationTag,
   CartButton,
   CartQuantity,
+  HeaderWrapper,
 } from './styles'
 import { MapPin, ShoppingCartSimple } from '@phosphor-icons/react'
 
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logo} alt="Coffee Delivery" />
+      <HeaderWrapper>
+        <img src={logo} alt="Coffee Delivery" />
 
-      <div>
-        <LocationTag>
-          <MapPin size={22} weight="fill" />
-          Porto Alegre, RS
-        </LocationTag>
-        <CartButton>
-          <Link to="/checkout">
-            <ShoppingCartSimple size={22} weight="fill" />
+        <div>
+          <LocationTag>
+            <MapPin size={22} weight="fill" />
+            Porto Alegre, RS
+          </LocationTag>
+          <CartButton>
+            <Link to="/checkout">
+              <ShoppingCartSimple size={22} weight="fill" />
 
-            <CartQuantity>1</CartQuantity>
-          </Link>
-        </CartButton>
-      </div>
+              <CartQuantity>1</CartQuantity>
+            </Link>
+          </CartButton>
+        </div>
+      </HeaderWrapper>
     </HeaderContainer>
   )
 }

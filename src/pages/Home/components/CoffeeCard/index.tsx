@@ -14,7 +14,7 @@ interface CoffeeProps {
   coffee: {
     id: string
     name: string
-    tag: string[]
+    tags: string[]
     description: string
     price: number
     imageUrl: string
@@ -22,14 +22,16 @@ interface CoffeeProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeProps) {
-  const { name, description, tag, imageUrl, price } = coffee
+  const { name, description, tags, imageUrl, price } = coffee
 
   return (
     <Card>
       <img src={imageUrl} alt="" />
 
       <Tags>
-        <Tag>{tag}</Tag>
+        {tags.map((tag, index) => (
+          <Tag key={index}>{tag}</Tag>
+        ))}
       </Tags>
 
       <strong>{name}</strong>

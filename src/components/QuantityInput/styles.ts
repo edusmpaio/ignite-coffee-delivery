@@ -14,10 +14,17 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
   height: ${(props) => (props.size === 'base' ? `2.375rem` : `2rem`)};
   gap: 0.25rem;
 
-  span {
+  input {
     color: ${(props) => props.theme['gray-900']};
-    flex: 1;
+    width: 100%;
     text-align: center;
+    border: 0;
+    background: none;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   button {
@@ -29,7 +36,12 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
 
     transition: color 150ms ease;
 
-    &:hover {
+    &:disabled {
+      opacity: 0.6;
+      cursor: auto;
+    }
+
+    &:not(:disabled):hover {
       color: ${(props) => props.theme['purple-700']};
     }
   }

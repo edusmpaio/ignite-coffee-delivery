@@ -9,10 +9,10 @@ interface QuantityInputProps {
 export function QuantityInput({ size = 'base' }: QuantityInputProps) {
   return (
     <QuantityInputContainer size={size}>
-      <button>
+      <button disabled>
         <Minus size={14} />
       </button>
-      <span>1</span>
+      <input type="number" min={1} value={1} readOnly />
       <button>
         <Plus size={14} />
       </button>
